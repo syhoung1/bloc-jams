@@ -4,14 +4,13 @@ var animatePoints = function() {
                  var points = document.getElementsByClassName('point');
 
     
-                 var revealPoint = function(a) {
+                 var revealPoint = function (a) {
                      points[a].style.opacity = 1;
                      points[a].style.transform = "scaleX(1) translateY(0)";
                      points[a].style.msTransform = "scaleX(1) translateY(0)";
                      points[a].style.WebkitTransform = "scaleX(1) translateY(0)";
                  };
-    
-                 
+
  
                  for(var i = 0; i<points.length;i++){
                      revealPoint(i);
@@ -31,7 +30,7 @@ window.onload = function() {
      window.addEventListener("scroll", function(event) {
          
          
-         if(document.documentElement.scrollTop || document.body.scrollTop >= scrollDistance) {
+         if (document.documentElement.scrollTop || document.body.scrollTop >= scrollDistance) {
              animatePoints(pointsArray);
          
          }
