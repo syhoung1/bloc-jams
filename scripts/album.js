@@ -29,6 +29,21 @@ var albumMarconi = {
      ]
  };
 
+var albumShirt = {
+     title: 'Shirt',
+     artist: 'Hangs',
+     label: 'FOTL',
+     year: '2016',
+     albumArtUrl: 'assets/images/album_covers/hanes.png',
+     songs: [
+         { title: 'Collar', duration: '1:01' },
+         { title: 'Neck', duration: '5:01' },
+         { title: 'Tags', duration: '0:00'},
+         { title: 'Sleeves', duration: '3:14' },
+         { title: 'Shoulders', duration: '2:15'}
+     ]
+ };
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template = 
          '<tr class="album-view-song-item">'
@@ -61,5 +76,22 @@ var setCurrentAlbum = function(album) {
 };
 
 window.onload = function() {
-    setCurrentAlbum(albumPicasso);
+    setCurrentAlbum(albumMarconi);
+    var num = 0;
+    document.getElementsByClassName('album-cover-art')[0].addEventListener('click', function(event) {
+
+        if (num == 0) {
+            setCurrentAlbum(albumPicasso);
+            num++;
+        } else if (num == 1) {
+            setCurrentAlbum(albumShirt);
+            num++;
+        } else if (num > 1) { 
+            setCurrentAlbum(albumMarconi)
+            num -= 2;
+        } 
+        console.log(num);
+
+})
+    
 };
