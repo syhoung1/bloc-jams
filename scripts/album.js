@@ -76,22 +76,18 @@ var setCurrentAlbum = function(album) {
 };
 
 window.onload = function() {
-    setCurrentAlbum(albumMarconi);
+    setCurrentAlbum(albumPicasso);
     var num = 0;
     document.getElementsByClassName('album-cover-art')[0].addEventListener('click', function(event) {
-
-        if (num == 0) {
-            setCurrentAlbum(albumPicasso);
-            num++;
-        } else if (num == 1) {
-            setCurrentAlbum(albumShirt);
-            num++;
-        } else if (num > 1) { 
-            setCurrentAlbum(albumMarconi)
-            num -= 2;
-        } 
-        console.log(num);
-
+        
+        var albumList = [albumPicasso, albumMarconi, albumShirt];
+        
+        
+        num == albumList.length-1 ? (num = 0, setCurrentAlbum(albumList[0])) : (setCurrentAlbum(albumList[num+1]), num++ );
+        
+        
+        
+        
 })
     
 };
