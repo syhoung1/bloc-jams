@@ -74,12 +74,10 @@ window.onload = function() {
             event.target.parentElement.querySelector('.song-item-number').innerHTML = playButtonTemplate;
         }
         
-        for(var i = 0; i < songRows.length; i++) {
+        for (var i = 0; i < songRows.length; i++) {
             songRows[i].addEventListener('mouseleave', function(event) {
                 this.children[0].innerHTML = this.children[0].getAttribute('data-song-number');
             });
-        // is this referring songRows[i]?
         }
     });
-    };
-
+};
