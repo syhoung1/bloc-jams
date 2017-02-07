@@ -21,7 +21,4 @@ $(window).load(function () {
             animatePoints();
         }
     });
-    
-    
 });
-        
