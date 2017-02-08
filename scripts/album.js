@@ -38,7 +38,7 @@ var createSongRow = function (songNumber, songName, songLength) {
         ;
     
     var $row = $(template);
-//    ??
+    
     var onHover = function (event) {
         var songNumBox = $(this).find('.song-item-number');
         var songNumber = songNumBox.attr('data-song-number');
@@ -108,4 +108,3 @@ var currentlyPlayingSong = null;
 $(document).ready(function () {
     setCurrentAlbum(albumPicasso);
 });
-
