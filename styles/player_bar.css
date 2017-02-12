@@ -85,10 +85,11 @@
 
 .seek-control .current-time {
     position: absolute;
+    left: 0;
     top: .5rem;
 }
 
-.seek-control total-time {
+.seek-control .total-time {
     position: absolute;
     right: 0;
     top: .5rem;
@@ -104,7 +105,7 @@
 
 .seek-bar .fill {
     background-color: white;
-    width: 36%;
+    width: 0;
     height: .25rem;
     border-radius: 2px;
 }
@@ -114,15 +115,18 @@
     height: .5rem;
     width: .5rem;
     background-color: white;
-    left: 36%;
+    left: ;
     top: 50%;
     margin-left: -.25rem;
     margin-top: -.25rem;
+    margin-bottom: -.25rem;
     border-radius: 50%;
     cursor: pointer;
-    -webkit-transition: all 100ms ease-in-out;
-       -moz-transition: all 100ms ease-in-out;
-            transition: all 100ms ease-in-out;
+    transition: width 100ms ease-in-out,
+/*                height 100ms ease-in-out,*/
+/*                margin-top 100ms ease-in-out,*/
+/*                margin-left 100ms ease-in-out;*/
+                transform 100ms ease-in-out;
 }
 
 .seek-bar:hover .thumb {
@@ -130,6 +134,7 @@
     height: 1.1rem;
     margin-top: -.5rem;
     margin-bottom: -.5rem;
+    transform: translate(-.3rem);
 }
 .player-bar .volume {
     width: 25%;
@@ -140,6 +145,7 @@
     font-size: 1.1rem;
     display: inline-block;
     vertical-align: middle;
+    margin-right: 13px;
 }
 
 .player-bar .volume .seek-bar {
