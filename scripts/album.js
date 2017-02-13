@@ -264,7 +264,7 @@ var setCurrentTimeInPlayerBar = function (currentTime) {
 var setTotalTime = function (totalTime) {
     var time = filterTimeCode(totalTime);
     $('.total-time').text(time);
-}
+};
 
 var filterTimeCode = function (timeInSeconds) {
     var time = Math.floor(parseFloat(timeInSeconds));
@@ -313,7 +313,7 @@ var setUpSeekBar = function () {
         $(document).bind('mouseup.thumb', function (event) {
             $(document).unbind('mousemove.thumb');
             $(document).unbind('mousedown.thumb');
-        })
+        });
     });
 };
 
@@ -330,7 +330,7 @@ var currentVolume = 80;
 
 var $nextButton = $('.main-controls .next');
 var $previousButton = $('.main-controls .previous');
-var $playPauseButton = $('.main-controls .play-pause')
+var $playPauseButton = $('.main-controls .play-pause');
 
 $(document).ready(function () {
     setCurrentAlbum(albumPicasso);
