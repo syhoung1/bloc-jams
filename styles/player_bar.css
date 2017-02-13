@@ -20,7 +20,6 @@
     text-decoration: none;
 }
 
-/*?*/
 .player-bar .container {
     display: table;
     padding: 0;
@@ -123,9 +122,6 @@
     border-radius: 50%;
     cursor: pointer;
     transition: width 100ms ease-in-out,
-/*                height 100ms ease-in-out,*/
-/*                margin-top 100ms ease-in-out,*/
-/*                margin-left 100ms ease-in-out;*/
                 transform 100ms ease-in-out;
 }
 
