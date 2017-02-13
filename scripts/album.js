@@ -128,7 +128,7 @@ var previousSong = function () {
         currentIndex = currentAlbum.songs.length - 1;
     } else {
         currentIndex--;
-    }
+    };
     
     setSong(currentIndex + 1);
     updatePlayerBarSong();
@@ -160,7 +160,7 @@ var toggleSong = function () {
           $('.main-controls .play-pause').html(playerBarPlayButton);
           $currentSongCell.html(playButtonTemplate);
         }
-      }
+    }
 };
 
 var updatePlayerBarSong = function () {
